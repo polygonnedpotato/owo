@@ -14,7 +14,6 @@ __version__ = "0.0.0-alpha0"
 
 
 def main() -> dict:
-    
     out=output.OutputObject()
 
     try:
