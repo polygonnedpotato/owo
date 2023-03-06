@@ -1,6 +1,0 @@
-help:
-  usage:
-    start: "usage"
-  cmds:
-    header: "COMMANDS"
-      
