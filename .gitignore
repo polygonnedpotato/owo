@@ -160,3 +160,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# replit
+.replit
+venv/
+replit.nix
+.upm/
+.cache/
+.config/
