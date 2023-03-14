@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-
-# from . import config
-from . import output
+# TODO: clean this up
+# TODO: load datafiles. if not found, either fail or install files (maybe)?
+from .output.owoOutputClass import owoOutputClass
+from . import datafiles
 import logging
 import sys
 
@@ -14,22 +15,17 @@ __version__ = "0.0.0-alpha0"
 
 DEBUG = True
 
-def main() -> dict:
-    try:
-        out=output.OutputObject()
-    except Exception as exc:
-        return {
-            '_err':True,
-            'exception':exc,
-            'vars':{
-                'globals': globals(),
-                'locals': locals(),
-                'dir': dir()
-            }
-        }
-    try:
-        pass
-      # do shit 
-    except KeyboardInterrupt:
-        return {'_kbi':True}
 
+def main() -> owoOutputClass:
+  # PART 1: init
+  try:
+    out = owoOutputClass()
+  except Exception as exc:
+    import traceback
+    traceback.print_exc(exc, file=sys.stderr)
+    sys.exit(1)
+  else:
+    pass
+  # PART 2: load config/data files
+  try:
+    

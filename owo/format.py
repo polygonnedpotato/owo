@@ -1,3 +1,7 @@
+# TODO: clean this up
+# TODO: complete dateFormat()
+# TODO: complete stringFormat()
+
 _DEFAULT = {
     '_DATETEMP':'%a, %d %b %Y %H:%M:%S %Z%z',
     '_INCLUDE':[
@@ -14,7 +18,7 @@ def dateFormat(input: str = _DEFAULT._DATETEMP,use_local:bool=True) -> str:
         from time import gmtime
         return strftime(input,gmtime())
 
-def stringformat(
+def stringFormat(
         input: str,
         include: list = _DEFAULT._INCLUDE
     ) -> str:

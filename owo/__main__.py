@@ -9,11 +9,8 @@ import owo
 
 if __name__ == "__main__":
     output=owo.main()
-    del owo
-    if output.__contains__('_err'):
-       print("an error occured!", file=sys.stderr)
-    if output.__contains__('_kb'):
-       print("interupted by keyboard")
-       sys.exit()
+    if output == None:
+      print("an error might have occured...",file=sys.stderr)
     else:
-        pass # output results
+      from yaml import dump
+      print(dump(output))

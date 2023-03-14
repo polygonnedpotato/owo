@@ -10,15 +10,14 @@ import logging
 #         'errors': []
 #     }
 
+
 class OutputObject:
 
-    def __init__(self):
-        self.status = 1
-        import sys
-        self.input = {
-            'argsRaw': sys.argv,
-            'streamObjects': []
-        }
-        del sys
-        self.output = []
-        self.errors = []
+  def __init__(self, type: int):
+    self.OOType = [
+      'HeaderTable', 'BasicInfoTable', 'AdvancedInfoTable', 'DebugInfoTable'
+    ][type]
+    if type == 0:
+      import sys
+      self.input = {'argsRaw': sys.argv, 'streamObjects': []}
+      del sys
