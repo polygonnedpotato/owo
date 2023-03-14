@@ -7,6 +7,12 @@ data:
         audio:
             codecs:
                 pcm_alaw:  "A-law / G.711 A-law PCM"
+                pcm_f16le: "Little Endian Floating point 16.8-bit PCM"
+                pcm_f24le: "Little Endian Floating point 24-bit PCM"
+                pcm_f32le: "Little Endian Floating point 32-bit PCM"
+                pcm_lxf:   "Little Endian Signed 20-bit planar PCM"
                 pcm_s16le: "Little Endian Signed 16-bit PCM"
+                pcm_u8:    "Unsigned 8-bit PCM"
                 pcm_u16le: "Little Endian Unsigned 16-bit PCM"
                 pcm_s16be: "Big Endian Signed 16-bit PCM"
+                pcm_sga:   "SGA PCM"
