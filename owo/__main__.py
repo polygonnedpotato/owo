@@ -11,14 +11,12 @@ if __name__ == "__main__":
     output=owo.main()
     del owo
     if output.__contains__('_err'):
-       #from yaml import dump
-       #print("exception! check stderr!!")
-       #print(dump(output),file=sys.stderr)
-       from json import dumps
-       print(dumps(output))
-       sys.exit(1)
+       print("an error occured!", file=sys.stderr)
+       import traceback
+       print(output['exception']) 
+       traceback.print_exc(output['exception'],file=sys.stderr)
     if output.__contains__('_kb'):
-        print("interupted by keyboard")
-        sys.exit()
+       print("interupted by keyboard")
+       sys.exit()
     else:
         pass # output results
