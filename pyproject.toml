@@ -17,16 +17,13 @@ keywords = [
   "fetch",
   "sqlite3"
 ]
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 classifiers = [
 	"Programming Language :: Python :: 3",
 	"Development Status :: 1 - Planning",
 	"Natural Language :: English",
 	"Operating System :: POSIX :: Linux",
 	"Programming Language :: Python",
-	"Programming Language :: Python :: 3.7",
-	"Programming Language :: Python :: 3.8",
-	"Programming Language :: Python :: 3.9",
 	"Programming Language :: Python :: 3.10",
 	"Programming Language :: Python :: 3.11",
 	"Programming Language :: Python :: 3.12",
@@ -40,8 +37,16 @@ classifiers = [
 	"Topic :: System :: Networking",
 	"Topic :: Utilities"
 ]
+dependencies = [
+		"PyYAML"
+]
 
 [project.urls]
 "Homepage" = "https://basedwa.re/elburg/owo"
 "Repository" = "https://basedwa.re/elburg/owo.git"
-"Bug Tracker" = "https://basedwa.re/elburg/owo/issues"
+"Bug Tracker" = "https://basedwa.re/elburg/owo/issues"i
+
+[project.optional-dependencies]
+ALL = [ # ONLY FOR SERVERS OR BIG COMPUTERS
+    "yt-dlp"
+]

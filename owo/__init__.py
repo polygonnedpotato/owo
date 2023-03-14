@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # TODO: clean this up
 # TODO: load datafiles. if not found, either fail or install files (maybe)?
+
 from .output.owoOutputClass import owoOutputClass
-from . import datafiles
+from . import config, parseargs
 import logging
 import sys
 
@@ -17,15 +18,15 @@ DEBUG = True
 
 
 def main() -> owoOutputClass:
-  # PART 1: init
-  try:
-    out = owoOutputClass()
-  except Exception as exc:
-    import traceback
-    traceback.print_exc(exc, file=sys.stderr)
-    sys.exit(1)
-  else:
-    pass
-  # PART 2: load config/data files
-  try:
-    
+    # PART 1: init
+    try:
+        out = owoOutputClass()  # Prepare output object
+        args = parseargs.parse()
+    except Exception as exc:
+        import traceback
+        traceback.print_exc(exc, file=sys.stderr)
+        sys.exit(1)
+    else:
+        pass
+
+    # PART 2: load config/data files

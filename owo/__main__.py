@@ -8,6 +8,7 @@ if __package__ is None and not hasattr(sys, "frozen"):
 import owo
 
 if __name__ == "__main__":
+    
     output=owo.main()
     if output == None:
       print("an error might have occured...",file=sys.stderr)

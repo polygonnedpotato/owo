@@ -1,0 +1,12 @@
+_meta:
+    names:
+        lang: "English"
+        region: "United States"
+data:
+    types:
+        audio:
+            codecs:
+                pcm_alaw:  "A-law / G.711 A-law PCM"
+                pcm_s16le: "Little Endian Signed 16-bit PCM"
+                pcm_u16le: "Little Endian Unsigned 16-bit PCM"
+                pcm_s16be: "Big Endian Signed 16-bit PCM"
